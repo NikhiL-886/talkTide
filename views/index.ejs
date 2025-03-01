@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <style>
+    /* Basic styling for chat UI */
+    #chatroom {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      height: 400px;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      margin: 5px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 290px;
+    }
+
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat Application</h1>
+
+  <!-- Chatroom Display -->
+  <div id="chatroom"></div>
+
+  <!-- Message Input -->
+  <input type="text" id="message" placeholder="Enter your message here" />
+  <button id="send_message">Send Message</button>
+
+  <!-- Username Input -->
+  <input type="text" id="username" placeholder="Enter your username" />
+  <button id="send_username">Set Username</button>
+
+  <!-- Include Socket.IO Client -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Your JavaScript File -->
+  <script src="../public/chat.js"></script>
+</body>
+</html>
